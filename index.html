@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Insurance Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="logo-container">
+      <img id="back" src="img/back.svg" alt="">
+      <img id="logo" src="img/logo.png" alt="">
+    </div>
+    <div id="contact-container">
+      <img id="contact" src="img/contact.svg" alt="">      
+    </div>
+  </header>
+  <section id="detail-section">
+    <h2>Select your plan & fill up your details
+    </h2>
+    <div id="scroll-container">
+      <div id="recommended-selection"class="slider-box">
+        <p id="recommended">Recommended</p>
+        <h3><strong>Comprehensive Cover</strong>
+          with Pre-inspection <img src="img/info-icon.svg" alt=""></h3>
+          <p class="info-text">Share 7 images of your car and get 25% off</p>
+          <div class="price-container">
+            <p class="price-text">₹ 5,495</p>
+            <p class="offer-text">25% off</p>
+          </div>
+      </div>
+      <div class="slider-box">
+        <h3><strong>Comprehensive Cover</strong></h3>
+          <p class="info-text"></p>
+          <div class="price-container">
+            <p class="price-text">₹ 6,495</p>
+          </div>
+      </div>
+      <div class="slider-box">
+        <h3><strong>Comprehensive Cover</strong></h3>
+          <p class="info-text"></p>
+          <div class="price-container">
+            <p class="price-text">₹ 6,495</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section >
+    <div id="range-slider">
+    <div>
+      <p>Select Value 1</p>
+      <div class="slider-container">
+      <input type="range" min="100" max="400" step="100" value="300" class="range-slider" id="LSlider" list="value1" onchange="updateSliderOne(this.value)" />
+      </div>
+      <datalist id="value1">
+        <option value="100" label="100"></option>
+        <option value="200" label="200"></option>
+        <option value="300" label="300"></option>
+        <option value="400" label="400"></option>
+      </datalist>
+      <p class="rangeValue" id="rangeOne">300</p>
+    </div>
+
+    <div>
+      <p>Select Value 2</p>
+      <div class="slider-container">
+      <input type="range" min="0" max="15" step="5" value="10" class="range-slider"  list="value2" onchange="updateSliderTwo(this.value)" />
+      </div>
+      <datalist id="value2">
+        <option value="0" label="0"></option>
+        <option value="5" label="5%"></option>
+        <option value="10" label="10%"></option>
+        <option value="15" label="15%"></option>
+      </datalist>
+      <p class="rangeValue" id="rangeTwo">10%</p>    
+    </div>
+
+    <div>
+      <p>Select Value 3</p>
+      <div class="slider-container">
+      <input type="range" min="10" max="40" step="10" value="20" class="range-slider" list="value3" onchange="updateSliderThree(this.value)" />
+      </div>
+      <datalist id="value2">
+        <option value="10" label="10"></option>
+        <option value="20" label="20"></option>
+        <option value="30" label="30"></option>
+        <option value="40" label="40"></option>
+      </datalist>
+      <p class="rangeValue" id="rangeThree">20</p>
+    </div>
+  </div>
+  </section>
+
+  <section id="form-details"> 
+      <h3>Your Details</h3>
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" value="Peter Jackson">
+      <label for="mobile-number" id="mobile-number-label">Mobile number</label>
+      <input type="text" id="mobile-number" value="10/05/2003">
+      <label for="email"></label>
+      <input type="email" placeholder="Enter email address">    
+  </section>
+
+  <section id="upload"> 
+    <h3>Uploads</h3>
+    <div class="uploded-item">
+      <img src="img/check.svg" alt="">
+      <p>Company PAN card</p>
+      <img src="img/edit_grey.svg" alt="">
+      <img src="img/preview.svg" alt="">
+    </div>
+    <div class="uploded-item">
+      <div class="upload-btn-wrapper">
+        <button class="btn"> <img src="img/upload.svg" alt=""> </button>        
+          <input type="file" id="myFile" placeholder="Upload Company address proof" onchange="uploadFile()"/>
+        <span id="uploadedFile">Upload Company address proof</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="cost-break">
+    <p>View Cost Break Up</p>
+    <img src="/img/arrow-right.svg" alt="">
+
+  </div>
+
+  <footer>
+    <div>
+      <h6>Total Premium</h6>
+      <div class="premium-container">
+        <p class="price-text">₹ 51,231</p>
+        <p class="info-text">Per year</p>
+      </div>
+
+    </div>
+    <div id="save-contanier">
+      <img src="img/save.svg" alt="">
+    </div>
+    <button>
+      Continue
+    </button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
